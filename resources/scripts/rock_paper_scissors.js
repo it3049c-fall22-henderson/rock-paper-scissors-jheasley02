@@ -1,3 +1,5 @@
+const { result } = require(`lodash`);
+
 class RockPaperScissors {
   constructor(username) {
     this.username = username;
@@ -15,7 +17,7 @@ class RockPaperScissors {
   generateCPUResponse(){
     const acceptedValues = [ `rock`, `paper`, `scissors` ];
     const choice = acceptedValues[Math.floor(Math.random() * acceptedValues.length)];
-    
+
     return choice;
   }
   /**
@@ -34,6 +36,28 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection){
+    if (userSelection === cpuSelection){
+      return `tie`;
+    } 
+    else if (userSelection == `rock`){
+      if(cpuSelection == `paper`){
+        return `lose`;
+      }else{
+        return `win`;
+      }
+    }else if(userSelection == `scissors`){
+      if(cpuSelection == `rock`){
+        return `lose`;
+      }else{
+        return `win`;
+      }
+    }else if(userSelection == `paper`){
+      if(cpuSelection == `scissors`){
+        return `lose`;
+      }else{
+        return `win`;
+      }
+    }
 
   }
 
@@ -44,5 +68,4 @@ class RockPaperScissors {
   play(userSelection){
 
   }
-
 }
