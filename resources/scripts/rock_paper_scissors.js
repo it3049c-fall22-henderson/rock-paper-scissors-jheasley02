@@ -35,27 +35,26 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection){
-    const result = document.querySelector(`.result`);
     if (userSelection === cpuSelection){
-      result.textContent = `tie`;
+      return `tie`;
     } 
     else if (userSelection == `rock`){
       if(cpuSelection == `paper`){
-        result.textContent = `lose`;
+        return `lose`;
       }else{
-        result.textContent = `win`;
+        return `win`;
       }
     }else if(userSelection == `scissors`){
       if(cpuSelection == `rock`){
-        result.textContent = `lose`;
+        return `lose`;
       }else{
-        result.textContent = `win`;
+        return `win`;
       }
     }else if(userSelection == `paper`){
       if(cpuSelection == `scissors`){
-        result.textContent = `lose`;
+        return `lose`;
       }else{
-        result.textContent = `win`;
+        return `win`;
       }
     }
 
