@@ -66,7 +66,11 @@ class RockPaperScissors {
    * @param {string} userSelection user selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   play(userSelection){
-    if (result.textContent === `win`)
+    if (result.textContent === `win`){
+      this.score.user ++;
+    }else if (result.textContent === `lose`){
+      this.score.cpu ++;
+    }
 
   }
 }
