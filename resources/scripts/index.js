@@ -1,5 +1,3 @@
-const { get } = require("lodash");
-
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -23,19 +21,18 @@ function updateScoreTallyUI(){
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-  const score = scoreParagraph;
+
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  const username = userName;
+  const username = 
   game = new RockPaperScissors(userName);
   // Complete
 });
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
-  get userSelection; 
   
 });
 
