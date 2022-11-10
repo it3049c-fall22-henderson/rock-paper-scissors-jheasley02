@@ -16,7 +16,6 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  document.getElementById(`score` , function ()){}
 }
 
 // updateGameHistoryUI
