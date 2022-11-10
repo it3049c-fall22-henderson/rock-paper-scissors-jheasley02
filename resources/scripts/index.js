@@ -1,4 +1,4 @@
-const { updateWith, replace } = require(`lodash`);
+const { updateWith, replace, get } = require(`lodash`);
 
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
@@ -18,7 +18,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  scoreParagraph.classList.replace(`USERNAME`, userName);
+  scoreParagraph.replace(game.username, userName);
 }
 
 // updateGameHistoryUI
@@ -29,7 +29,6 @@ function updateGameHistoryUI(){
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
   const username = userName;
-
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
   game = new RockPaperScissors(username);
