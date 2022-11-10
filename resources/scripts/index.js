@@ -18,7 +18,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  scoreParagraph.
+  //scoreParagraph.
 }
 
 // updateGameHistoryUI
