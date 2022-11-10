@@ -19,24 +19,26 @@
                 <div>
                     <label for="username">Your Name</label>
                     <input name="username" id="username" placeholder="Enter Name Here..."></input>
-                <button type="button" class="btn btn-primary" name="button" id="start-game-button">Start Game!</button>
+                <button id="start-game-button">Start Game!</button>
                 </div>
         </div>
 
         <div id="game-screen">
             <div id="score-tally">
-                <p id="score"><USERNAME>: <USER_SCORE> v CPU: <CPU_SCORE></p>
+                <div id="score-tally">
+                    <p id="score">User: 0 v CPU: 0</p>
+                </div>
             </div>
-            <form class="form-group" id="game-form"></form>
+            <form id="game-form"></form>
                 <div>
                     <label for="user-selection">Select Your Choice</label>
-                    <select class="custom-select" name="user-selection" id="user-selection">
+                    <select name="user-selection" id="user-selection">
                         <option value="rock">Rock</option>
                         <option value="paper">Paper</option>
                         <option value="scissors">Scissors</option>
                     </select>
                 </div>
-                <button type="button" class="btn btn-success" name="button" id="go-button">Go!</button>
+                <button id="go-button">Go!</button>
             <p id="game-history"></p>
         </div>
     </div>
