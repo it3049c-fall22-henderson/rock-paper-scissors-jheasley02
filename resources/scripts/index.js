@@ -33,6 +33,7 @@ startGameButton.addEventListener(`click`, function () {
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
   game = new RockPaperScissors(username);
+  function updateScoreTallyUI
   // Complete
 });
 
