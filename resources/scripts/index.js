@@ -1,3 +1,5 @@
+const { updateWith, replace } = require(`lodash`);
+
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -16,6 +18,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
+  scoreParagraph.classList.replace(`USERNAME`, userName);
 }
 
 // updateGameHistoryUI
