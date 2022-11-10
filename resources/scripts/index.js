@@ -18,8 +18,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  const p = scoreParagraph;
-  p.classList.replace(`<USERNAME>`, userName);
+  scoreParagraph.
 }
 
 // updateGameHistoryUI
