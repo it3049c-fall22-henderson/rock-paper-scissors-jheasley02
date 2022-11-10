@@ -16,9 +16,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  const p = scoreParagraph;
   const username = userName;
-  p.textContent = username + `: ` + this.score.user + `v CPU: ` + this.score.cpu;
 
 }
 
@@ -33,7 +31,6 @@ startGameButton.addEventListener(`click`, function () {
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
   game = new RockPaperScissors(username);
-  function updateScoreTallyUI
   // Complete
 });
 
