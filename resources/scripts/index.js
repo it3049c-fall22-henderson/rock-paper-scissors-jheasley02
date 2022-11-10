@@ -16,8 +16,10 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
+  const p = scoreParagraph;
   const username = userName;
-  scoreParagraph.USERNAME.replace(username);
+  p.textContent = username + `: ` + this.score.user + `v CPU: ` + this.score.cpu;
+
 }
 
 // updateGameHistoryUI
