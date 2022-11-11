@@ -1,5 +1,3 @@
-const { get } = require(`lodash`);
-
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -23,24 +21,21 @@ function updateScoreTallyUI(){
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-  
+
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  const username = document.getElementById(`username`).value;
+  const username = userName;
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-  game = new RockPaperScissors(userName);
+  game = new RockPaperScissors(username);
   // Complete
 });
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
-  userSelection.getElementByName(userSelection);
-  game.play(userSelection);
-  game.scoreParagraph.updateScoreTallyUI();
-  game.gameHistoryParagraph.updateGameHistoryUI();
+  
 });
 
 // If you're doing the extra-credit, uncomment the below: reset-game-button
