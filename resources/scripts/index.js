@@ -16,7 +16,8 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-
+  const username = userName;
+  scoreParagraph.innerHTML = username + `: ` + this.score.user + `v CPU: ` + this.score.cpu;
 }
 
 // updateGameHistoryUI
@@ -26,10 +27,10 @@ function updateGameHistoryUI(){
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  const username = userName;
+  const username = document.getElementById(`username`);
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-  game = new RockPaperScissors(username);
+  game = new RockPaperScissors(userName);
   // Complete
 });
 
