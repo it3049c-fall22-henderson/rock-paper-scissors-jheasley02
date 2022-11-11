@@ -18,23 +18,23 @@
             <form id="name-form"></form>
             <div>
                 <label for="username">Your Name</label>
-                <input name="username" id="username" placeholder="Enter Name Here..."></input>
-                <button id="start-game-button">Start Game!</button>
+                <input name="username" id="username" class="form-control" placeholder="Enter Name Here..."></input>
+                <button id="start-game-button" class="btn btn-primary">Start Game!</button>
             </div>
         </div>
         <div id="game-screen">
             <div id="score-tally">
                 <p id="score">User: 0 v CPU: 0</p>
             </div>
-            <form id="game-form"></form>
+            <form id="game-form" class="form-group"></form>
             <div>
                 <label for="user-selection">Select Your Choice</label>
-                <select name="user-selection" id="user-selection">
+                <select name="user-selection" id="user-selection" class="custom-select">
                     <option value="rock">Rock</option>
                     <option value="paper">Paper</option>
                     <option value="scissors">Scissors</option>
                 </select>
-                <button id="go-button">Go!</button>
+                <button id="go-button" class="btn btn-success">Go!</button>
             </div>
             <p id="game-history"></p>
         </div>
