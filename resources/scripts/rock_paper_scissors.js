@@ -71,7 +71,6 @@ class RockPaperScissors {
   play(userSelection){
     const loser = `lose`;
     const winner = `win`;
-    const oops = `tie`;
     if (result.textContent === winner){
       this.score.user ++;
     }else if (result.textContent === loser){
