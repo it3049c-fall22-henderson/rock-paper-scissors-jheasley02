@@ -12,7 +12,7 @@ const gameHistoryParagraph = document.getElementById(`game-history`);
 let game;
 
 // hide game screen
-//gameScreen.classList.add(`d-none`);
+gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
@@ -27,10 +27,10 @@ function updateGameHistoryUI(){
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  const username = 
-  //welcomeScreen.classList.add(`d-none`);
-  //gameScreen.classList.remove(`d-none`);
-  //game = new RockPaperScissors(userName);
+  const username =
+  welcomeScreen.classList.add(`d-none`);
+  gameScreen.classList.remove(`d-none`);
+  game = new RockPaperScissors(userName);
   // Complete
 });
 
