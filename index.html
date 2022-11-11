@@ -15,12 +15,13 @@
     <div class="container">
         <h1>Rock Paper Scissors</h1>
         <div id="welcome-screen">
-            <form id="name-form"></form>
+            <form id="name-form">
                 <div class="form-group">
                     <label for="username" form="/your name/i">Your Name</label>
                     <input name="username" id="username" placeholder="Enter Name Here..." class="form-control"></input>
                 </div>
-                <button id="start-game-button" class="btn btn-primary">Start Game!</button>
+                <button id="start-game-button" class="btn btn-primary" form="/start game(.)+/i">Start Game!</button>
+            </form>
         </div>
         <div id="game-screen">
             <div id="score-tally">
@@ -35,8 +36,8 @@
                         <option value="scissors">Scissors</option>
                     </select>
                 </div>
+            <button id="go-button" form="/go(.)+/i" class="btn btn-success">Go!</button>
             </form>
-                <button id="go-button" class="btn btn-success">Go!</button>
             <p id="game-history"></p>
         </div>
     </div>
