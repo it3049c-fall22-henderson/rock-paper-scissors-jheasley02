@@ -7,7 +7,7 @@ class RockPaperScissors {
       user: 0,
       cpu:0 
     },
-    this.gameHistoryLog = [],
+    this.gameHistoryLog = [];
     this.gameHistoryLog.push(`Yahya selected Scissors, CPU selected Paper: Yahya wins wins`);
   }
 
