@@ -35,26 +35,29 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection){
+    const loser = `lose`;
+    const winner = `win`;
+    const oops = `tie`;
     if (userSelection === cpuSelection){
-      return `tie`;
+      return oops;
     } 
     else if (userSelection == `rock`){
       if(cpuSelection == `paper`){
-        return `lose`;
+        return loser;
       }else{
-        return `win`;
+        return winner;
       }
     }else if(userSelection == `scissors`){
       if(cpuSelection == `rock`){
-        return `lose`;
+        return loser;
       }else{
-        return `win`;
+        return winner;
       }
     }else if(userSelection == `paper`){
       if(cpuSelection == `scissors`){
-        return `lose`;
+        return loser;
       }else{
-        return `win`;
+        return winner;
       }
     }
 
@@ -65,9 +68,12 @@ class RockPaperScissors {
    * @param {string} userSelection user selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   play(userSelection){
-    if (result.textContent === `win`){
+    const loser = `lose`;
+    const winner = `win`;
+    const oops = `tie`;
+    if (result.textContent === winner){
       this.score.user ++;
-    }else if (result.textContent === `lose`){
+    }else if (result.textContent === loser){
       this.score.cpu ++;
     }
 
