@@ -27,9 +27,9 @@ function updateGameHistoryUI(){
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
   const username = document.getElementById(`username`).value;
+  game = new RockPaperScissors(userName);
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-  game = new RockPaperScissors(userName);
   // Complete
 });
 
