@@ -16,8 +16,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  const username = userName;
-  scoreParagraph.innerHTML = username + `: ` + this.score.user + `v CPU: ` + this.score.cpu;
+  userName.innerHTML = <USERNAME></USERNAME>
 }
 
 // updateGameHistoryUI
@@ -28,7 +27,7 @@ function updateGameHistoryUI(){
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
   const username = this.username;
-  welcomeScreen.classList.add(`d-none`);
+  welcomeScreen.classList.not.toBeVisible();
   gameScreen.classList.remove(`d-none`);
   game = new RockPaperScissors(userName);
   // Complete
