@@ -1,3 +1,5 @@
+const { get } = require(`lodash`);
+
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -16,12 +18,12 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  document.getElementsByName;
+
 }
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-
+  
 }
 
 // start-game-button EventListener
@@ -35,7 +37,10 @@ startGameButton.addEventListener(`click`, function () {
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
-  
+  userSelection.getElementByName(userSelection);
+  game.play(userSelection);
+  game.scoreParagraph.updateScoreTallyUI();
+  game.gameHistoryParagraph.updateGameHistoryUI();
 });
 
 // If you're doing the extra-credit, uncomment the below: reset-game-button
