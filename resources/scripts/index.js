@@ -30,7 +30,7 @@ startGameButton.addEventListener(`click`, function () {
   const username = 
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-  game = new RockPaperScissors(userName);
+  //game = new RockPaperScissors(userName);
   // Complete
 });
 
