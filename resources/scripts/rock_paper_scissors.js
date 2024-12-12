@@ -1,3 +1,5 @@
+const { result } = require(`lodash`);
+
 class RockPaperScissors {
   constructor(username) {
     this.username = username;
@@ -6,6 +8,7 @@ class RockPaperScissors {
       cpu:0 
     },
     this.gameHistoryLog = [];
+    this.gameHistoryLog.push(`Yahya selected Scissors, CPU selected Paper: Yahya wins wins`);
   }
 
   /**
@@ -14,8 +17,8 @@ class RockPaperScissors {
    */
   generateCPUResponse(){
     const acceptedValues = [ `rock`, `paper`, `scissors` ];
-
-    return ;
+    const cpuSelection = acceptedValues[Math.floor(Math.random() * acceptedValues.length)];
+    return cpuSelection;
   }
   /**
    * returns one of the following values: `win`, `lose`, `tie`
@@ -33,6 +36,31 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection){
+    const loser = `lose`;
+    const winner = `win`;
+    const oops = `tie`;
+    if (userSelection === cpuSelection){
+      return oops;
+    } 
+    else if (userSelection == `rock`){
+      if(cpuSelection == `paper`){
+        return loser;
+      }else{
+        return winner;
+      }
+    }else if(userSelection == `scissors`){
+      if(cpuSelection == `rock`){
+        return loser;
+      }else{
+        return winner;
+      }
+    }else if(userSelection == `paper`){
+      if(cpuSelection == `scissors`){
+        return loser;
+      }else{
+        return winner;
+      }
+    }
 
   }
 
@@ -41,7 +69,13 @@ class RockPaperScissors {
    * @param {string} userSelection user selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   play(userSelection){
+    const loser = `lose`;
+    const winner = `win`;
+    if (result.textContent === winner){
+      this.score.user ++;
+    }else if (result.textContent === loser){
+      this.score.cpu ++;
+    }
 
   }
-
 }
